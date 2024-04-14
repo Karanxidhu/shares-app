@@ -71,7 +71,7 @@ function Home() {
         }}
 
     return (
-        <div className='flex min-h-screen flex-col items-center justify-center p-12 md:p-24 bg-zinc-950'>
+        <div className='flex min-h-screen flex-col items-center justify-center p-7 sm:p-12 md:p-24 bg-zinc-950'>
             {
                 !loading && <div className='relative w-full lg:w-[75%] md:w-[85%] xl:w-[45%] border p-3 rounded-xl flex flex-wrap items-center'>
                     <div className='flex space-x-2 items-center justify-center w-full py-4'>

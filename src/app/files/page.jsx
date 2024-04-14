@@ -74,7 +74,7 @@ function Files() {
 }
 
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center p-24 bg-zinc-950'>
+    <div className='flex min-h-screen flex-col items-center justify-center p-7 sm:p-12 md:p-24 bg-zinc-950'>
       {
         !loading && <div className=' w-full lg:w-[75%] md:w-[85%] xl:w-[45%] border p-3 rounded-xl flex flex-wrap items-center gap-5'>
 
@@ -85,7 +85,7 @@ function Files() {
                   
                 >
                   <div className='flex items-center gap-5'>
-                    <img src="file.png" className='h-20' alt="" onClick={() => {
+                    <img src="file.png" className='h-12 md:h-20' alt="" onClick={() => {
                     handleDownload(key)
                   }} />
                     <img src="cross.png" className=' h-6 p-1 rounded-full bg-zinc-950 ' alt=""
@@ -95,7 +95,7 @@ function Files() {
                     />
                   </div>
 
-                  <p className='text-center pt-2 font-semibold' onClick={() => {
+                  <p className='text-center pt-2 text-sm sm:text-base font-semibold' onClick={() => {
                     handleDownload(key)
                   }}>{item.slice(23, item.length)}</p>
                 </div>
@@ -114,13 +114,13 @@ function Files() {
             />
             <Button variant='default' className='h-10' onClick={submit}>Send</Button>
           </div>
-          <div className='flex justify-center items-center w-full space-x-1 hover:cursor-pointer'
+          <div className='flex justify-center items-center w-full mt-5 space-x-1 hover:cursor-pointer'
             onClick={() => {
               router.push('/main')
             }}
           >
             <Link />
-            <p className='font-bold'> continue with text </p>
+            <p className='font-bold text-sm sm:text-base'> continue with text </p>
             <Link />
           </div>
         </div>

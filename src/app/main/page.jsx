@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Link } from 'lucide-react'
 
-function page() {
+function Home() {
     const router = useRouter()
     const handleSubmit = async (e) => {
         try {
@@ -37,7 +37,7 @@ function page() {
     }, [])
     const [messages, setMessages] = useState([])
     const [loading, setLoading] = useState(true)
-    const [text, setText] = useState<null | string>(null);
+    const [text, setText] = useState(null);
 
     const getData = async () => {
         setLoading(true);
@@ -85,8 +85,8 @@ function page() {
                         {
                             messages && messages.map((item, key) => {
                                 return (
-                                    <div className='flex px-2 space-x-2 bg-zinc-900 border rounded-lg items-center justify-around'>
-                                        <span key={key} className='text-sm sm:text-lg py-3 pl-3'>{item.message}</span>
+                                    <div  key={key} className='flex px-2 space-x-2 bg-zinc-900 border rounded-lg items-center justify-around'>
+                                        <span  className='text-sm sm:text-lg py-3 pl-3'>{item.message}</span>
                                         <img src="cross.png" className=' h-5 p-1 rounded-full bg-zinc-950 ' onClick={() => {
                                             handleDelete(item._id)
                                         }} alt="" />
@@ -119,4 +119,4 @@ function page() {
     )
 }
 
-export default page
+export default Home

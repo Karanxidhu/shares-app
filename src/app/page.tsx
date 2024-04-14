@@ -1,10 +1,15 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
+"use client"
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-zinc-950 dark:bg-white">
-      
-    </main>
+  const router = useRouter()
+  useEffect(()=>{
+    router.push('/login')
+  },[])
+  return (<>
+  </>
   );
 }

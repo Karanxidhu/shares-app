@@ -8,7 +8,7 @@ import download from "downloadjs";
 import { useRouter } from 'next/navigation'
 import { Link } from 'lucide-react'
 
-function page() {
+function Files() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -129,4 +129,4 @@ function page() {
   )
 }
 
-export default page
+export default Files

@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Terminal } from "lucide-react"
 
-function page() {
+function Login() {
   const router = useRouter()
-  const [code, setCode] = useState<null | string>(null);
+  const [code, setCode] = useState(null);
   const [alert, setAlert] = useState(false)
   const handleSubmit = async () => {
     try {
@@ -50,7 +50,7 @@ function page() {
         <Terminal className="h-4 w-4" />
         <AlertTitle>Auth error</AlertTitle>
         <AlertDescription>
-          Don't fuck with it niqqa enter correct code
+          Dont fuck with it niqqa enter correct code
         </AlertDescription>
       </Alert>}
         <h1 className="scroll-m-20 text-2xl md:text-4xl font-extrabold tracking-tight lg:text-5xl text-center">
@@ -72,4 +72,4 @@ function page() {
   )
 }
 
-export default page
+export default Login

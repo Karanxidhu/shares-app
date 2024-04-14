@@ -41,7 +41,7 @@ function Files() {
   const submit = async (event) => {
     const formData = new FormData()
     formData.append("fileUp", file)
-    const result = await axios.post('https://sharesb.karanxd.xyz/message/upload', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+    const result = await axios.post('https://sharesb.karanxd.xyz/api/message/upload', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
     console.log(result)
     location.reload();
   }

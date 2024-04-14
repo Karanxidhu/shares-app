@@ -22,7 +22,7 @@ function Files() {
 
   const fetchFiles = async () => {
     setLoading(true);
-    const response = await fetch('http://128.199.28.127/api/message/files', {
+    const response = await fetch('https://sharesb.karanxd.xyz/api/message/files', {
       method: 'get',
       headers: {
         "token": localStorage.getItem('token')
@@ -41,13 +41,13 @@ function Files() {
   const submit = async (event) => {
     const formData = new FormData()
     formData.append("fileUp", file)
-    const result = await axios.post('http://128.199.28.127/api/message/upload', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+    const result = await axios.post('https://sharesb.karanxd.xyz/message/upload', formData, { headers: { 'Content-Type': 'multipart/form-data' } })
     console.log(result)
     location.reload();
   }
 
   const handleDownload = async (key) => {
-    const res = await fetch("http://128.199.28.127/api/message/download", {
+    const res = await fetch("https://sharesb.karanxd.xyz/api/message/download", {
       method: 'post',
       headers: {
         "token": localStorage.getItem('token'),
@@ -60,7 +60,7 @@ function Files() {
   }
 
   const handleDelete = async (key) => {
-    const response = await fetch('http://128.199.28.127/api/message/deletefile', {
+    const response = await fetch('https://sharesb.karanxd.xyz/api/message/deletefile', {
         method: "post",
         headers: {
             "token": localStorage.getItem('token'),

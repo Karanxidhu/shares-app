@@ -9,7 +9,7 @@ function Home() {
     const router = useRouter()
     const handleSubmit = async (e) => {
         try {
-            const response = await fetch('http://128.199.28.127/api/message/add', {
+            const response = await fetch('https://sharesb.karanxd.xyz/api/message/add', {
                 method: "POST",
                 headers: {
                     "token": localStorage.getItem('token'),
@@ -41,7 +41,7 @@ function Home() {
 
     const getData = async () => {
         setLoading(true);
-        const response = await fetch('http://128.199.28.127/api/message/getall', {
+        const response = await fetch('https://sharesb.karanxd.xyz/api/message/getall', {
             method: "get",
             headers: {
                 "token": localStorage.getItem('token')
@@ -53,7 +53,7 @@ function Home() {
     }
 
     const handleDelete = async (id) => {
-        const response = await fetch('http://128.199.28.127/api/message/delete/' + id, {
+        const response = await fetch('https://sharesb.karanxd.xyz/api/message/delete/' + id, {
             method: "post",
             headers: {
                 "token": localStorage.getItem('token')

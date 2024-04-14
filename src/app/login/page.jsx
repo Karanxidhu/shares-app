@@ -12,7 +12,7 @@ function Login() {
   const [alert, setAlert] = useState(false)
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://128.199.28.127/api/auth/', {
+      const response = await fetch('https://sharesb.karanxd.xyz/api/auth/', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

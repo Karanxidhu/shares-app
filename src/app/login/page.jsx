@@ -60,7 +60,7 @@ function Login() {
           enter the code
         </h2>
         <div className='flex justify-center items-center mt-10 space-x-5'>
-          <Input type="email" placeholder="Code" className='w-1/2 sm:w-[30%] text-center h-12 text-base sm:text-lg font-bold' onChange={(e) => {
+          <Input type="password" placeholder="Code" className='w-1/2 sm:w-[30%] text-center h-12 text-base sm:text-lg font-bold' onChange={(e) => {
             setCode(e.target.value) 
           }}
           onKeyDown={(e) => something(e) }
